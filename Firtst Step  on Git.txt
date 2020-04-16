@@ -1,1 +1,13 @@
-上傳至
+git status => 在本機端，顯示目前的檔案修改情況
+
+git log --no-merges => 在本機端，顯示目前已經 commit 的所有修改內容，並剔除 merge 時所產生的額外訊息
+
+git commit -m "message" => 在本機端，提交 staging area 所修改的內容至 local repo，並設定 commit message
+
+git clone 遠端位置 資料夾名子
+
+git push => 將本機端目前所在的 branch 所作的修改上傳到遠端主機的同名 branch
+
+git remote -v => 在本機端，顯示 fetch, push 遠端檔案庫的資訊
+
+git remote add 名稱 遠端位置 
