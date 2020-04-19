@@ -82,3 +82,48 @@ import matplotlib.pyplot as plt
 data = pdr.DataReader("2330.TW", "yahoo", "2000-01-01","2020-04-16")
 c = data['Close']
 c.plot()
+
+
+df=pd.read_csv('examples/ex1.csv')
+df=pd.read_csv('examples/ex1.csv',names=['a','b','c','d','messenge'])
+
+###讀檔案 分隔號為,
+df=pd.read_table('examples/ex3.csv',sep='\s+')
+
+
+df=pd.read_csv('examples/ex5.csv')
+
+df.to_csv('examples/out.csv')
+
+import csv
+class my_dialect:
+    lineteminator='\n'
+    delimiter=';'
+    quotechar='"'
+    quoting=csv.QUOTE_MINIMAL
+# reader=csv.reader(f,dialect=my_dialect)    
+
+
+
+with open('mydata.csv','w') as f:
+    writer =csv.writer(f,dialect=my_dialect)
+    writer.writerow(('one','two','three'))
+    writer.writerow(('1','2','3'))
+    writer.writerow(('1','2','3'))  
+    writer.writerow(('1','2','3'))
+
+
+
+
+data=pd.read_json('examples/example.json')
+
+
+
+
+    
+
+
+
+
+
+
