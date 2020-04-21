@@ -61,7 +61,7 @@ print(data2)
 data2.loc['pop']=100
 print(data2)
 
-###直接新 曾一個column 並判斷state 是否一樣
+###直接新增一個column 並判斷state 是否一樣
 data2['y/n']=data2.states==100
 print(data2)
 del data2['y/n']

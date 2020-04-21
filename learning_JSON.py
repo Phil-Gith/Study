@@ -4,7 +4,7 @@ Created on Sun Apr 19 17:40:56 2020
 
 @author: Phil
 """
-
+###將list tuple 轉成json格式(有s)
 import json
 list_n=[1,2,3,4]
 tuple_n=(5,6,7,8)
@@ -18,6 +18,8 @@ dictobj={'simon':10,'trisa':20,'cloud':236}
 
 jsondata3=json.dumps(dictobj)
 print(jsondata3, type(jsondata3))
+
+###將dict 轉成json格式 有無排序的差異(有s)
 
 players = {'Stephen Curry':'Golden State Warriors',
            'Kevin Durant':'Golden State Warriors',
@@ -43,7 +45,7 @@ dictobj=json.loads(json_obj)
 print(dictobj, type(dictobj))
 
 
-###json 只能放一哥物件 有兩個時要放在 dict 裡
+###json 只能放一個物件 有兩個時要放在 dict 裡
 
 
 # obj='{"asia":{"Tokyo":100,"taypei":10000}}'
@@ -67,7 +69,7 @@ print(json_obj["Asia"][0]["Japan"])
 print(json_obj["Asia"][1]["China"])
 
 
-       
+###存出json檔用 dump
 dictObj = {'b':80, 'a':25, 'c':60}   
 with open('out1_8.json','w') as kkk:
     json.dump(dictObj,kkk,indent=4)
@@ -75,6 +77,8 @@ with open('out1_8.json','w') as kkk:
 with open('out1_8-1.json','w') as kkk:
     json.dump(players,kkk,indent=4)
 
+
+###存出json檔 有中文時必須改變編碼
 objdict2=[{"國家":"日本","首都":"東京","鄉下":"北海道"},{"國家":"台灣","首都":"台北","鄉下":"花蓮"}]
 
 with open('out1_9-1.json','w',encoding='utf-8') as kkk:
